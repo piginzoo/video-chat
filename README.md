@@ -6,6 +6,26 @@
 
 做这个项目的起因很简单：看技术视频、长访谈、纪录片的时候，来回拖进度条找"他说过的一句关键的话"太痛苦了。有了它，视频变成了可以**搜索、可以提问、可以精读**的东西。
 
+## 效果预览
+
+**📜 脚本跟随** —— 1 小时的财经访谈，2211 行脚本实时跟随播放进度：
+
+<p align="center">
+  <img src="docs/images/preview-script.png" width="620" alt="脚本跟随：视频播到哪，脚本跟到哪">
+</p>
+
+**💬 AI 对话** —— 拿着完整脚本回答问题，一键生成结构树和 300 字总结：
+
+<p align="center">
+  <img src="docs/images/preview-chat.png" width="620" alt="AI 对话：结构树 + 总结 + 时间戳引用">
+</p>
+
+**⚙️ 双服务商 + ASR 语音识别** —— 智谱 GLM / DeepSeek 随时切换，无字幕视频一键听录，每项配置带连通性测试：
+
+<p align="center">
+  <img src="docs/images/preview-settings.png" width="620" alt="设置：LLM 双服务商 + ASR 语音识别配置">
+</p>
+
 ---
 
 ## 它能干什么
