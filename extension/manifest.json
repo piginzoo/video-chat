@@ -1,0 +1,67 @@
+{
+  "manifest_version": 3,
+  "name": "视频讲解器",
+  "version": "1.0.0",
+  "description": "视频脚本跟随 × 双语字幕 × AI 对话 × 一键总结（YouTube / B站）",
+  "icons": {
+    "16": "assets/logo-16.png",
+    "48": "assets/logo-48.png",
+    "128": "assets/logo-128.png"
+  },
+  "action": {
+    "default_title": "视频讲解器",
+    "default_icon": {
+      "16": "assets/logo-16.png",
+      "48": "assets/logo-48.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["sidePanel", "storage", "tabs", "scripting", "declarativeNetRequest", "offscreen"],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "hdslb_referer",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtube.com/*",
+    "https://www.bilibili.com/*",
+    "https://api.bilibili.com/*",
+    "https://aisubtitle.hdslb.com/*",
+    "https://*.bilivideo.com/*",
+    "https://*.bilivideo.cn/*",
+    "http://*.bilivideo.com/*",
+    "http://*.bilivideo.cn/*",
+    "https://*.akamaized.net/*",
+    "https://*.googlevideo.com/*",
+    "https://api.deepseek.com/*",
+    "https://open.bigmodel.cn/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://youtube.com/*"],
+      "js": ["content/yt-main.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://www.youtube.com/*", "https://youtube.com/*"],
+      "js": ["content/bridge.js", "content/youtube.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.bilibili.com/*"],
+      "js": ["content/bridge.js", "content/bilibili.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

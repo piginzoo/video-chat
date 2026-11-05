@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+._*
+
+# 本地测试密钥（绝不入库）
+.test-secrets.local.json
+*.local.json
+
+# Chrome 本地生成的元数据
+_metadata/
+
+# 日志与临时文件
+*.log
+*.tmp
+node_modules/
+assets/logo-128.b64

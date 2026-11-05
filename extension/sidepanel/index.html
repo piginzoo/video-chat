@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>视频讲解器</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sp-head">
+    <img class="logo" src="../assets/logo-128.png" alt="logo">
+    <div class="name">视频讲解器</div>
+    <div class="ver">v1.0</div>
+    <button class="close" id="closeBtn" title="关闭侧边栏">✕</button>
+  </div>
+
+  <div class="tabs">
+    <div class="tab on" data-tab="script">脚本</div>
+    <div class="tab" data-tab="chat">对话</div>
+    <div class="tab" data-tab="settings">设置</div>
+  </div>
+
+  <div class="sp-body">
+    <div class="tabpane on" id="pane-script"></div>
+    <div class="tabpane" id="pane-chat"></div>
+    <div class="tabpane" id="pane-settings"></div>
+  </div>
+
+  <div class="sp-foot">
+    <img src="../assets/logo-16.png" alt="">
+    <span>© 2026 piginzoo · 视频讲解器</span>
+    <span style="margin-left:auto">数据仅存本机</span>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

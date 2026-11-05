@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "Referer", "operation": "set", "value": "https://www.bilibili.com/" }
+      ],
+      "responseHeaders": [
+        { "header": "Access-Control-Allow-Origin", "operation": "set", "value": "https://www.bilibili.com" },
+        { "header": "Access-Control-Allow-Credentials", "operation": "set", "value": "true" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||aisubtitle.hdslb.com",
+      "resourceTypes": ["xmlhttprequest", "other"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "Referer", "operation": "set", "value": "https://www.bilibili.com/" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||bilivideo",
+      "resourceTypes": ["xmlhttprequest", "other"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "Referer", "operation": "set", "value": "https://www.bilibili.com/" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||akamaized.net",
+      "resourceTypes": ["xmlhttprequest", "other"]
+    }
+  }
+]
+
